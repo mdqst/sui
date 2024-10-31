@@ -163,6 +163,15 @@ pub(super) fn committer<H: Handler + 'static>(
                         "Gathered batch",
                     );
 
+                    if batch_checkpoints == 0 {
+                        assert_eq!(batch_rows, 0);
+                        assert!(!watermark_needs_update);
+                        // If there is no new data to commit, we can skip the rest of the process.
+                        // Note that we cannot use batch_rows for the check, since it is possible
+                        // that there are empty checkpoints with no new rows added.
+                        continue;
+                    }
+
                     metrics
                         .collector_batch_size
                         .with_label_values(&[H::NAME])
