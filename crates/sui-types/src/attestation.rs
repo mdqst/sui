@@ -412,7 +412,7 @@ impl AttestationDocument {
     }
 
     fn validate_pcrs(&self, expected_pcrs: &[&[u8]]) -> Result<(), NitroError> {
-        if expected_pcrs.len() != 3 || self.pcrs.len() != 3 {
+        if expected_pcrs.len() != 3 {
             return Err(NitroError::InvalidPcrs);
         }
         let mut is_match = true;

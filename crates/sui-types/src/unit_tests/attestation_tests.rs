@@ -4,6 +4,7 @@
 use super::attestation_verify_inner;
 use fastcrypto::encoding::Encoding;
 use fastcrypto::encoding::{Base64, Hex};
+
 #[test]
 fn attestation_parse() {
     let res = attestation_verify_inner(

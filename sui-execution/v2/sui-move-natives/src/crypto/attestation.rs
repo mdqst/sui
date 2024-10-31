@@ -14,7 +14,7 @@ use smallvec::smallvec;
 use std::collections::VecDeque;
 use sui_types::attestation::attestation_verify_inner;
 pub fn nitro_attestation_verify(
-    context: &mut NativeContext,
+    _context: &mut NativeContext,
     ty_args: Vec<Type>,
     mut args: VecDeque<Value>,
 ) -> PartialVMResult<NativeResult> {
