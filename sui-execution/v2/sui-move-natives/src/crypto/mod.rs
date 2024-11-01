@@ -1,7 +1,6 @@
 // Copyright (c) Mysten Labs, Inc.
 // SPDX-License-Identifier: Apache-2.0
 
-pub mod attestation;
 pub mod bls12381;
 pub mod ecdsa_k1;
 pub mod ecdsa_r1;

@@ -40,7 +40,6 @@ use crate::crypto::poseidon::PoseidonBN254CostParams;
 use crate::crypto::zklogin;
 use crate::crypto::zklogin::{CheckZkloginIdCostParams, CheckZkloginIssuerCostParams};
 use better_any::{Tid, TidAble};
-use crypto::attestation;
 use move_binary_format::errors::{PartialVMError, PartialVMResult};
 use move_core_types::{
     annotated_value as A,
@@ -861,11 +860,6 @@ pub fn all_natives(silent: bool) -> NativeFunctionTable {
             "poseidon",
             "poseidon_bn254_internal",
             make_native!(poseidon::poseidon_bn254_internal),
-        ),
-        (
-            "attestation",
-            "nitro_attestation_verify",
-            make_native!(attestation::nitro_attestation_verify),
         ),
     ];
     let sui_framework_natives_iter =

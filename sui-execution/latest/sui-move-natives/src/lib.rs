@@ -41,7 +41,10 @@ use crate::crypto::poseidon::PoseidonBN254CostParams;
 use crate::crypto::zklogin;
 use crate::crypto::zklogin::{CheckZkloginIdCostParams, CheckZkloginIssuerCostParams};
 use better_any::{Tid, TidAble};
-use crypto::{attestation, vdf::{self, VDFCostParams}};
+use crypto::{
+    attestation,
+    vdf::{self, VDFCostParams},
+};
 use move_binary_format::errors::{PartialVMError, PartialVMResult};
 use move_core_types::{
     annotated_value as A,
