@@ -29,7 +29,7 @@ pub fn nitro_attestation_verify(
     let enclave_pk = pop_arg!(args, VectorRef);
     let attestation = pop_arg!(args, VectorRef);
 
-   let attestation_ref = attestation.as_bytes_ref();
+    let attestation_ref = attestation.as_bytes_ref();
     let enclave_pk_ref = enclave_pk.as_bytes_ref();
     let pcr0_ref = pcr0.as_bytes_ref();
     let pcr1_ref = pcr1.as_bytes_ref();
