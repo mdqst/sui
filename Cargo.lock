@@ -13947,6 +13947,7 @@ dependencies = [
  "serde",
  "sui-field-count",
  "sui-pg-temp-db",
+ "sui-protocol-config",
  "sui-storage",
  "sui-types",
  "telemetry-subscribers",
